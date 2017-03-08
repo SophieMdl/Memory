@@ -1,46 +1,45 @@
-body{
-	font-family : 'Roboto', sans-serif;
-	background: #eaeaea
+@font-face {
+  font-family: "generica";
+  src: url("/font/generica.otf");
 }
-
-section{
-	padding : 20px 60px;
-	width :765px;
+@font-face {
+  font-family: "generica";
+  src: url("/font/generica.otf");
+  font-weight: bold;
 }
-
+body {
+    font-family: 'generica', sans-serif;
+    font-weight: bold;
+}
+section {
+    padding: 20px 60px;
+       width: 765px;
+}
 h1{
+		font-weight: bold;
 }
 
-h1, 
-h2{
-	display: inline;
-}
-
-.score{
-	float: right
-}
-
-#plateau{
- 	/* display: flex;  */
-	width :705px;
-	  position: relative;
+#plateau {
+	width: 100%;
+    position: relative;
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
     perspective: 800px;
-      display: -webkit-flex;
-   display: flex;
+    display: -webkit-flex;
+    display: flex;
     -webkit-flex-flow: row wrap;
-   flex-flow: row wrap;
+    flex-flow: row wrap;
 }
-.card{
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  	width : 225px;
-	height : 225px;
-	margin-right : 10px;
-	margin-top: 10px;
-	  -webkit-transition: -webkit-transform 0.5s;
+.card {
+	cursor : pointer;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    width: 160px;
+    height: 160px;
+    margin-right: 10px;
+    margin-top: 10px;
+    -webkit-transition: -webkit-transform 0.5s;
     -moz-transition: -moz-transform 0.5s;
     -o-transition: -o-transform 0.5s;
     transition: transform 0.5s;
@@ -50,37 +49,42 @@ h2{
     transform-style: preserve-3d;
     -webkit-transform-origin: 50% 50%;
 }
-.card figure{
-	  margin: 0;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  	border-radius: 10px;
-  	  -webkit-backface-visibility: hidden;
+.card:hover{
+         -webkit-box-shadow: 0px 0px 10px 2px #e9e1ca;
+		-moz-box-shadow: 0px 0px 10px 2px #e9e1ca;
+		filter:progid:DXImageTransform.Microsoft.Glow(Color=#e9e1ca,Strength=12);
+		zoom:1;
+		box-shadow: 0px 0px 10px 2px #e9e1ca;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+}
+
+.card figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-
-.card .back{
-
-	background-color: #e9e1ca;
-	border-right : 5px solid #d0c1aa;
-	border-bottom : 5px solid #d0c1aa;
+.card .back {
+    background: #e9e1ca;
 }
-.card .front{
-	 -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
-    	border-right : 5px solid #d0c1aa;
-	border-bottom : 5px solid #d0c1aa;
+.card .front {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
 }
 .card.flipped {
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+    scale : 1.05;
 }
