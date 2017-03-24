@@ -1,18 +1,20 @@
 (function(){
-	var score = 0;
-	var nbClick = 0;
-	var scoreField = document.querySelector('.score span');
-	var clickField = document.querySelector('.coup span');
-
-	var pokeball = new Image();
-		pokeball.src = 'images/pokeball.svg';
-
-
+	var numberCaught = 0;
+	var caughtField = document.querySelector('.caught');
+	var timeField = document.querySelector('.time');
 	var plateau = document.querySelector("#plateau")
+	var btnReset = document.querySelector(".reset")
 	var flippedCards = [];
 	var card, front, bg;
 	var j, x, i;
+	var cards;
+	var seconds =0;
+
+	setInterval(function(){seconds++;}, 1000);
+/*	var menu = document.querySelector("#menu");*/
 /*	var cardsLength = cards.length;*/
+	btnReset.addEventListener("click", reset);
+	$("#menu").hide();
 
 	var bgCards = [
 		"images/charmander.svg",
@@ -29,7 +31,6 @@
 		"images/meowth.svg"
 	]
 	var bgCardsLength = bgCards.length;
-	
 	shuffle(bgCards);
 
 	//Création de chaque carte avec un front particulier et ajout d'un écouteur au clic
@@ -43,10 +44,16 @@
 	 	front.style.background = bg;
 		card.addEventListener('click', function(){
 	 		addFlipped(this);
-	 		nbClick++;
-			clickField.innerHTML = nbClick;
 	 	});
-	 	
+	}
+	function reset(){
+		cards = document.querySelectorAll(".card");
+		for(var u = 0 ; u < cards.length; u++){
+			cards[u].classList.remove('flipped');
+		}
+		$("#menu").fadeOut("fast");
+		numberCaught = 0;
+		caughtField.innerHTML = numberCaught;
 	}
 
 	function shuffle(tab) {
@@ -78,13 +85,14 @@
 	
 	function checkResult(){
 		if(flippedCards[0].innerHTML == flippedCards[1].innerHTML){
-				score++;
-				scoreField.innerHTML = score;
-				flippedCards = []
-				if(score == 6){
-					alert("Amazing !!");
+				numberCaught++;
+				caughtField.innerHTML = numberCaught;
+				flippedCards = [];
+				if(numberCaught == bgCardsLength/2){
+					$("#menu").fadeIn("fast");
+					timeField.innerHTML = seconds;
 				}
-			}
 		}
+	}
 }());
 				
