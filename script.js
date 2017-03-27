@@ -1,7 +1,7 @@
 (function(){
 	var numberCaught = 0;
 	var caughtField = document.querySelector('.caught');
-	var timeField = document.querySelector('.time');
+	var timeField = document.querySelector('.timer');
 	var plateau = document.querySelector("#plateau")
 	var btnReset = document.querySelector(".reset")
 	var flippedCards = [];
@@ -54,6 +54,7 @@
 		$("#menu").fadeOut("fast");
 		numberCaught = 0;
 		caughtField.innerHTML = numberCaught;
+		seconds = 0;
 	}
 
 	function shuffle(tab) {
