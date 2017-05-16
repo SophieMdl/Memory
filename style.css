@@ -1,20 +1,20 @@
-
 body {
     font-family: 'Dosis', sans-serif;
     line-height: 1.5;
-
 }
+
 section {
     padding: 0px 60px;
     width: 720px;
     margin: 0 auto;
 }
+
 h1 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 #plateau {
-	width: 100%;
+    width: 100%;
     position: relative;
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
@@ -23,18 +23,19 @@ h1 {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
-    flex-flow: row wrap; 
+    flex-flow: row wrap;
     text-align: center;
     justify-content: space-around;
 }
+
 .card {
-	cursor : pointer;
+    cursor: pointer;
     box-sizing: border-box;
     transform-style: preserve-3d;
     transition: transform 1s;
     width: 170px;
     height: 170px;
-    margin-top: 10px; 
+    margin-top: 10px;
     -webkit-transition: -webkit-transform 0.5s;
     -moz-transition: -moz-transform 0.5s;
     -o-transition: -o-transform 0.5s;
@@ -45,14 +46,15 @@ h1 {
     transform-style: preserve-3d;
     -webkit-transform-origin: 50% 50%;
 }
+
 .card:hover {
     -webkit-box-shadow: 0px 0px 10px 2px #e9e1ca;
-	-moz-box-shadow: 0px 0px 10px 2px #e9e1ca;
-	filter:progid:DXImageTransform.Microsoft.Glow(Color=#e9e1ca,Strength=12);
-	zoom:1;
-	box-shadow: 0px 0px 10px 2px #e9e1ca;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
+    -moz-box-shadow: 0px 0px 10px 2px #e9e1ca;
+    filter: progid: DXImageTransform.Microsoft.Glow(Color=#e9e1ca, Strength=12);
+    zoom: 1;
+    box-shadow: 0px 0px 10px 2px #e9e1ca;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
 
 .card figure {
@@ -68,52 +70,58 @@ h1 {
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 .card .back {
     background: #e9e1ca;
 }
+
 .card .front {
     -webkit-transform: rotateY( 180deg);
     -moz-transform: rotateY( 180deg);
     -o-transform: rotateY( 180deg);
     transform: rotateY( 180deg);
 }
+
 .card.flipped {
     -webkit-transform: rotateY( 180deg);
     -moz-transform: rotateY( 180deg);
     -o-transform: rotateY( 180deg);
     transform: rotateY( 180deg);
-    scale : 1.05;
-}
-#menu{
-    z-index : 2;
-    width : 390px;
-    height : auto;
-    position: absolute;
-    top :5vw;
-    background-color: #ded2ae;
-    border-radius: 10px;
-    padding : 30px 60px;
-    font-size : 1.6rem;
-    text-align : center;
-    display: inline-block;
-    border : 3px solid #fff;
+    scale: 1.05;
 }
 
-#menu img{
-    width : 90px;
-    height : 90px;
-        margin-top: -4vw;
+#menu {
+    z-index: 2;
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 5vw;
+    background-color: #ded2ae;
+    border-radius: 10px;
+    padding: 30px 60px;
+    font-size: 1.6rem;
+    text-align: center;
+    display: inline-block;
+    border: 3px solid #fff;
 }
-#menu button{
+
+#menu img {
+    width: 90px;
+    height: 90px;
+    margin-top: -4vw;
+}
+
+#menu button {
     cursor: pointer;
-        font-size : 1.2rem;
-background-color: #368090;
+    font-size: 1.2rem;
+    background-color: #368090;
     padding: 10px 30px;
     border-radius: 10px;
     border: none;
     color: #fff;
-    font-family: 'Dosis',sans-serif; 
+    font-family: 'Dosis', sans-serif;
 }
-#menu button:hover{
+
+#menu button:hover {
     background-color: #1d5561;
 }
