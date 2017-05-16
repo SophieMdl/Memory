@@ -100,5 +100,8 @@
         }
     }
     //Timer
-    setInterval(function() { seconds++; }, 1000);
+    setInterval(function() {
+        seconds++;
+        console.log(seconds)
+    }, 1000);
 }());
