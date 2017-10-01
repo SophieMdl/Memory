@@ -8,8 +8,20 @@ section {
     margin: 0 auto;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
 h1 {
     font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    align-self: flex-end;
+    margin: 0;
 }
 
 #plateau {
@@ -125,6 +137,12 @@ h1 {
 }
 
 @media screen and (max-width: 750px) {
+    h1 {
+        font-size: 1.2em;
+    }
+    h3 {
+        font-size: 1em;
+    }
     .card {
         width: calc(33% - 10px);
     }
