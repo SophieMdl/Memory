@@ -11,7 +11,7 @@ section {
 header {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 h1 {
@@ -144,6 +144,7 @@ h3 {
         font-size: 1em;
     }
     .card {
-        width: calc(33% - 10px);
+        margin-top: 5px;
+        width: calc(33% - 5px);
     }
 }
