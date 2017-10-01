@@ -1,5 +1,4 @@
 (function() {
-    alert("Vous êtes en résolution : " + screen.width + "*" + screen.height + "\n");
     var numberCaught = 0;
     var caughtField = document.querySelector('.caught');
     var timeField = document.querySelector('.timer');
@@ -10,6 +9,8 @@
     var j, x, i;
     var cards;
     var seconds = 0;
+    var cardSize;
+
 
     btnReset.addEventListener("click", reset);
     //Le menu disparaît au début du jeu
@@ -38,6 +39,9 @@
         card.setAttribute("class", "card");
         card.innerHTML = "<figure class='back'></figure><figure class='front'></figure>";
         plateau.appendChild(card);
+        //Calcul de la hauteur en fonction de la largeur - qui s'adapte en responsive
+        cardSize = $('.card').width();
+        $('.card').css('height', cardSize)
         front = card.childNodes[1];
         bg = "url(" + bgCards[i] + ") no-repeat";
         front.style.background = bg;
@@ -103,6 +107,5 @@
     //Timer
     setInterval(function() {
         seconds++;
-        console.log(seconds)
     }, 1000);
 }());
