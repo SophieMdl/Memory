@@ -1,4 +1,5 @@
 (function() {
+    alert("Vous êtes en résolution : " + screen.width + "*" + screen.height + "\n");
     var numberCaught = 0;
     var caughtField = document.querySelector('.caught');
     var timeField = document.querySelector('.timer');
