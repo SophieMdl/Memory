@@ -102,13 +102,13 @@ h3 {
 
 #menu {
     z-index: 2;
-    width: 390px;
+    width: 80%;
     height: auto;
     position: absolute;
-    top: 5vw;
+    top: 150px;
     background-color: #ded2ae;
     border-radius: 10px;
-    padding: 30px 60px;
+    padding: 30px 10px;
     font-size: 1.6rem;
     text-align: center;
     display: inline-block;
@@ -116,9 +116,11 @@ h3 {
 }
 
 #menu img {
+    position: absolute;
     width: 90px;
     height: 90px;
-    margin-top: -4vw;
+    left: calc(50% - 45px);
+    top: -55px;
 }
 
 #menu button {
@@ -142,6 +144,9 @@ h3 {
     }
     h3 {
         font-size: 1em;
+    }
+    p {
+        font-size: 0.8em;
     }
     .card {
         margin-top: 5px;
